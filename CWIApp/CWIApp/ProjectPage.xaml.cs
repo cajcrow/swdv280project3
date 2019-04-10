@@ -9,17 +9,17 @@ using Xamarin.Forms.Xaml;
 
 namespace CWIApp
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class ProjectPage : ContentPage
-	{
-		public ProjectPage ()
-		{
-			InitializeComponent ();
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class ProjectPage : ContentPage
+    {
+        public ProjectPage()
+        {
+            InitializeComponent();
 
             BackgroundColor = Color.Red;
             Content = new Frame
             {
-                OutlineColor = Color.Black,
+                BorderColor = Color.Black,
                 BackgroundColor = Color.White,
                 HorizontalOptions = LayoutOptions.Center,
                 VerticalOptions = LayoutOptions.Center,
@@ -32,5 +32,5 @@ namespace CWIApp
                 }
             };
         }
-	}
+    }
 }
