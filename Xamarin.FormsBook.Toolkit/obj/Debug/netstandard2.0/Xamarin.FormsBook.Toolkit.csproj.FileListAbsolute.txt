@@ -1,0 +1,13 @@
+C:\Users\rguay\Documents\GitHub\SWDV280_SWDV_App\Xamarin.FormsBook.Toolkit\bin\Debug\netstandard2.0\Xamarin.FormsBook.Toolkit.deps.json
+C:\Users\rguay\Documents\GitHub\SWDV280_SWDV_App\Xamarin.FormsBook.Toolkit\bin\Debug\netstandard2.0\Xamarin.FormsBook.Toolkit.dll
+C:\Users\rguay\Documents\GitHub\SWDV280_SWDV_App\Xamarin.FormsBook.Toolkit\bin\Debug\netstandard2.0\Xamarin.FormsBook.Toolkit.pdb
+C:\Users\rguay\Documents\GitHub\SWDV280_SWDV_App\Xamarin.FormsBook.Toolkit\obj\Debug\netstandard2.0\CheckBox.xaml.g.cs
+C:\Users\rguay\Documents\GitHub\SWDV280_SWDV_App\Xamarin.FormsBook.Toolkit\obj\Debug\netstandard2.0\NewCheckBox.xaml.g.cs
+C:\Users\rguay\Documents\GitHub\SWDV280_SWDV_App\Xamarin.FormsBook.Toolkit\obj\Debug\netstandard2.0\PickerCell.xaml.g.cs
+C:\Users\rguay\Documents\GitHub\SWDV280_SWDV_App\Xamarin.FormsBook.Toolkit\obj\Debug\netstandard2.0\Xamarin.FormsBook.Toolkit.csproj.CoreCompileInputs.cache
+C:\Users\rguay\Documents\GitHub\SWDV280_SWDV_App\Xamarin.FormsBook.Toolkit\obj\Debug\netstandard2.0\Xamarin.FormsBook.Toolkit.AssemblyInfoInputs.cache
+C:\Users\rguay\Documents\GitHub\SWDV280_SWDV_App\Xamarin.FormsBook.Toolkit\obj\Debug\netstandard2.0\Xamarin.FormsBook.Toolkit.AssemblyInfo.cs
+C:\Users\rguay\Documents\GitHub\SWDV280_SWDV_App\Xamarin.FormsBook.Toolkit\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\rguay\Documents\GitHub\SWDV280_SWDV_App\Xamarin.FormsBook.Toolkit\obj\Debug\netstandard2.0\Xamarin.FormsBook.Toolkit.dll
+C:\Users\rguay\Documents\GitHub\SWDV280_SWDV_App\Xamarin.FormsBook.Toolkit\obj\Debug\netstandard2.0\Xamarin.FormsBook.Toolkit.pdb
+C:\Users\rguay\Documents\GitHub\SWDV280_SWDV_App\Xamarin.FormsBook.Toolkit\obj\Debug\netstandard2.0\Xamarin.FormsBook.Toolkit.csprojAssemblyReference.cache
