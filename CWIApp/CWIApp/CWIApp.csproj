@@ -22,7 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\SWDV 265\Library\Xamarin.FormsBook.Toolkit\Xamarin.FormsBook.Toolkit\Xamarin.FormsBook.Toolkit\Xamarin.FormsBook.Toolkit.csproj" />
+    <ProjectReference Include="..\..\Xamarin.FormsBook.Toolkit\Xamarin.FormsBook.Toolkit.csproj" />
   </ItemGroup>
 
   <ItemGroup>
