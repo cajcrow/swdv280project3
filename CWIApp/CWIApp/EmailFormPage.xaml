@@ -32,7 +32,7 @@
 
                     <EntryCell Label="Phone:"
                                Text="{Binding PhoneNumber}"
-                               Placeholder="Enter phone number"
+                               Placeholder="Phone Number"
                                Keyboard="Telephone" />
 
                     <SwitchCell Text="Do you want information?"
