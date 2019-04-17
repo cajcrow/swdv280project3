@@ -8,7 +8,7 @@
         iOS="0, 20, 0, 0" />
     </ContentPage.Padding>
     <StackLayout>
-        <Frame OutlineColor="Accent">
+        <Frame BorderColor="Accent">
             <StackLayout Orientation="Horizontal">
                 <BoxView Color="Red" />
                 <Button Text="Software Development Course Overview"                       
@@ -17,7 +17,7 @@
                        Clicked="OnLabelOverviewClicked" />
             </StackLayout>
         </Frame>
-        <Frame OutlineColor="Accent">
+        <Frame BorderColor="Accent">
             <StackLayout Orientation="Horizontal">
                 <BoxView Color="Green" />
                 <Button Text="Internship Form"                       
@@ -27,7 +27,7 @@
 
             </StackLayout>
         </Frame>
-        <Frame OutlineColor="Accent">
+        <Frame BorderColor="Accent">
             <StackLayout Orientation="Horizontal">
                 <BoxView Color="Blue" />
                 <Button Text="Internship Agreement Form"                       
@@ -36,7 +36,7 @@
                        Clicked="OnLabelInternAFClicked" />
             </StackLayout>
         </Frame>
-        <Frame OutlineColor="Accent">
+        <Frame BorderColor="Accent">
             <StackLayout Orientation="Horizontal">
                 <BoxView Color="OrangeRed" />
                 <Button Text="Internship Timesheet"                       
@@ -45,5 +45,6 @@
                        Clicked="OnLabelInternTSClicked" />
             </StackLayout>
         </Frame>
-    </StackLayout>
+    </StackLayout>
+
 </ContentPage>
