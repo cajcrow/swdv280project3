@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,22 +15,45 @@ namespace CWIApp
         public ProjectPage()
         {
             InitializeComponent();
-
-            BackgroundColor = Color.Red;
-            Content = new Frame
+            BackgroundColor = Color.Crimson;
+            Content = new StackLayout
             {
-                BorderColor = Color.Black,
-                BackgroundColor = Color.White,
-                HorizontalOptions = LayoutOptions.Center,
-                VerticalOptions = LayoutOptions.Center,
-                Content = new Label
+                Children =
                 {
-                    Text = "This is the Project Page!",
+                    new Image { Source = ImageSource.FromResource("CWIApp.Images.Logo.jpg")},
+                    new Label {
+                    Text = "Under Construction",
                     FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label)),
                     FontAttributes = FontAttributes.Italic,
-                    TextColor = Color.Red
+                    TextColor = Color.WhiteSmoke,
+                    HorizontalOptions = LayoutOptions.Center,
+                    VerticalOptions = LayoutOptions.Center}
                 }
             };
+        }
+
+        void OnToolbarItemEventsClicked(object sender, EventArgs args)
+        {
+            this.Navigation.PushAsync(new EventPage());
+
+        }
+
+        void OnToolbarItemFormsClicked(object sender, EventArgs args)
+        {
+            this.Navigation.PushAsync(new PWPortalPage());
+
+        }
+
+        void OnToolbarItemProjectClicked(object sender, EventArgs args)
+        {
+            this.Navigation.PushAsync(new ProjectPage());
+
+        }
+
+        void OnToolbarItemEmailClicked(object sender, EventArgs args)
+        {
+            this.Navigation.PushAsync(new EmailFormPage());
+
         }
     }
 }
