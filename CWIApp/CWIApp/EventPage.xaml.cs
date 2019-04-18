@@ -7,12 +7,12 @@ using System.Diagnostics;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace Events
+namespace CWIApp
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class EventsPage : ContentPage
+	public partial class EventPage : ContentPage
 	{
-		public EventsPage ()
+		public EventPage ()
 		{
 			InitializeComponent ();
 		}
