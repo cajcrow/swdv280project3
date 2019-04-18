@@ -1,101 +1,71 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"     
-             xmlns:local="clr-namespace:CWIApp.Forms"
-             x:Class="CWIApp.PWPortalPage">
-    <ContentPage.Padding>
-        <OnPlatform x:TypeArguments="Thickness"
-        iOS="0, 20, 0, 0" />
-    </ContentPage.Padding>
-    
-    <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Events" 
-                     Order="Primary"
-                     Clicked="OnToolbarItemEventsClicked">
-            <ToolbarItem.Icon>
-                <OnPlatform x:TypeArguments="FileImageSource">
-                    <On Platform="iOS" Value="edit.png" />
-                    <On Platform="Android" Value="ic_action_edit.png" />
-                    <On Platform="UWP" Value="Images/star.png" />
-                </OnPlatform>
-            </ToolbarItem.Icon>
-        </ToolbarItem>
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Input;
+using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
-        <ToolbarItem Text="Student Forms"
-                     Order="Primary"
-                     Clicked="OnToolbarItemFormsClicked">
-            <ToolbarItem.Icon>
-                <OnPlatform x:TypeArguments="FileImageSource">
-                    <On Platform="iOS" Value="search.png" />
-                    <On Platform="Android" Value="ic_action_search.png" />
-                    <On Platform="UWP" Value="Images/copy-item.png" />
-                </OnPlatform>
-            </ToolbarItem.Icon>
-        </ToolbarItem>
+namespace CWIApp
+{
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class PWPortalPage : ContentPage
+    {
 
-        <ToolbarItem Text="Projects"
-                     Order="Primary"
-                     Clicked="OnToolbarItemProjectClicked">
-            <ToolbarItem.Icon>
-                <OnPlatform x:TypeArguments="FileImageSource">
-                    <On Platform="iOS" Value="reload.png" />
-                    <On Platform="Android" Value="ic_action_refresh.png" />
-                    <On Platform="UWP" Value="Images/briefcase.png" />
-                </OnPlatform>
-            </ToolbarItem.Icon>
-        </ToolbarItem>
+        public PWPortalPage()
+        {
+            InitializeComponent();
 
-        <ToolbarItem Text="Sign-Up"
-                     Order="Primary"
-                     Clicked="OnToolbarItemEmailClicked">
-            <ToolbarItem.Icon>
-                <OnPlatform x:TypeArguments="FileImageSource">
-                    <On Platform="iOS" Value="reload.png" />
-                    <On Platform="Android" Value="ic_action_refresh.png" />
-                    <On Platform="UWP" Value="Images/email.png" />
-                </OnPlatform>
-            </ToolbarItem.Icon>
-        </ToolbarItem>
-    </ContentPage.ToolbarItems>
-    
-    <StackLayout>
-        <Frame BorderColor="Accent">
-            <StackLayout Orientation="Horizontal">
-                <BoxView Color="Red" />
-                <Button Text="Software Development Course Overview"                       
-                       TextColor="Blue"
-                       BorderWidth="0"
-                       Clicked="OnLabelOverviewClicked" />
-            </StackLayout>
-        </Frame>
-        <Frame BorderColor="Accent">
-            <StackLayout Orientation="Horizontal">
-                <BoxView Color="Green" />
-                <Button Text="Internship Form"                       
-                       TextColor="Blue"
-                       BorderWidth="0"
-                       Clicked="OnLabelInternshipClicked" />
+            Title = "SWDV Forms and Documents";
 
-            </StackLayout>
-        </Frame>
-        <Frame BorderColor="Accent">
-            <StackLayout Orientation="Horizontal">
-                <BoxView Color="Blue" />
-                <Button Text="Internship Agreement Form"                       
-                       TextColor="Blue"
-                       BorderWidth="0"
-                       Clicked="OnLabelInternAFClicked" />
-            </StackLayout>
-        </Frame>
-        <Frame BorderColor="Accent">
-            <StackLayout Orientation="Horizontal">
-                <BoxView Color="OrangeRed" />
-                <Button Text="Internship Timesheet"                       
-                       TextColor="Blue"
-                       BorderWidth="0"
-                       Clicked="OnLabelInternTSClicked" />
-            </StackLayout>
-        </Frame>
-    </StackLayout>
+        }
 
-</ContentPage>
+        public void OnLabelOverviewClicked(object sender, EventArgs args)
+        {
+            
+            this.Navigation.PushAsync(new Forms.CourseOverview());
+        }
+
+        public void OnLabelInternshipClicked(object sender, EventArgs args)
+        {
+            
+            this.Navigation.PushAsync(new Forms.InternshipForm());
+        }
+
+        public void OnLabelInternAFClicked(object sender, EventArgs args)
+        {
+           
+            this.Navigation.PushAsync(new Forms.InternAF());
+        }
+
+        public void OnLabelInternTSClicked(object sender, EventArgs args)
+        {
+            
+            this.Navigation.PushAsync(new Forms.InternTS());
+        }
+        void OnToolbarItemEventsClicked(object sender, EventArgs args)
+        {
+            this.Navigation.PushAsync(new EventPage());
+
+        }
+
+        void OnToolbarItemFormsClicked(object sender, EventArgs args)
+        {
+            this.Navigation.PushAsync(new PWPortalPage());
+
+        }
+
+        void OnToolbarItemProjectClicked(object sender, EventArgs args)
+        {
+            this.Navigation.PushAsync(new ProjectPage());
+
+        }
+
+        void OnToolbarItemEmailClicked(object sender, EventArgs args)
+        {
+            this.Navigation.PushAsync(new EmailFormPage());
+
+        }
+    }
+}
