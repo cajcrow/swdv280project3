@@ -29,12 +29,6 @@ namespace CWIApp
             };
         }
 
-        void OnToolbarItemClicked(object sender, EventArgs args)
-        {
-            ToolbarItem toolbarItem = (ToolbarItem)sender;
-            label.Text = "ToolbarItem '" + toolbarItem.Text + "' clicked";
-        }
-
         void OnToolbarItemEventsClicked(object sender, EventArgs args)
         {
             this.Navigation.PushAsync(new EventPage());           
