@@ -1,46 +1,183 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              Title="Events Page"
-             x:Class="CWIApp.EventPage">
+             x:Class="Events.EventsPage">
+
     <ContentPage.Padding>
         <OnPlatform x:TypeArguments="Thickness">
             <On Platform="iOS" Value="0, 20, 0, 0" />
+            <On Platform="UWP" Value="10,0" />
         </OnPlatform>
     </ContentPage.Padding>
-    
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="100" />
-            <RowDefinition Height="2*" />
-            <RowDefinition Height="1*" />
-        </Grid.RowDefinitions>
 
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-        </Grid.ColumnDefinitions>        
+    <AbsoluteLayout>
+        <ScrollView>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="100" />
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1*" />
+                </Grid.RowDefinitions>
 
-        <Image BackgroundColor="Red"
-               Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2">
-            <Image.Source>
-                <OnPlatform x:TypeArguments="ImageSource">
-                    <On Platform="iOS" Value="Icon-60.png" />
-                    <On Platform="Android" Value="icon.png" />
-                    <On Platform="UWP" Value="Images/ComputerScienceandTechDept_Logo.jpg" />
-                </OnPlatform>
-            </Image.Source>
-        </Image>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
 
-        <BoxView Color="Green"
-                 Grid.Row="2" Grid.Column="0" />
+                <!-- Row 1, all columns CWI Home Page-->
+                <Image BackgroundColor="White"
+                    Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2">
+                    <Image.Source>
+                        <OnPlatform x:TypeArguments="ImageSource">
+                            <On Platform="iOS" Value="CWI-Logo300x106.jpg" />
+                            <On Platform="Android" Value="CWI-Logo300x106.jpg" />
+                            <On Platform="UWP" Value="Images/CWI-Logo300x106.jpg" />
+                        </OnPlatform>
+                    </Image.Source>
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnImageTapped" 
+                            CommandParameter="http://cwi.edu/" />
+                    </Image.GestureRecognizers>
+                </Image>
 
-        <BoxView Color="Red"
-                 Grid.Row="2" Grid.Column="1" Grid.RowSpan="2" />
+                <!--Row 2, 1st Column CWI Dept of Science and Tech-->
+                <ContentView Grid.Row="2" Grid.Column="0">
+                    <Image>
+                        <Image.Source>
+                            <OnPlatform x:TypeArguments="FileImageSource">
+                                <On Platform="iOS" Value="CSTDept-Logo300x77.jpg" />
+                                <On Platform="Android" Value="CSTDept-Logo300x77.jpg" />
+                                <On Platform="UWP" Value="Images/CSTDept-Logo300x77.jpg" />
+                            </OnPlatform>
+                        </Image.Source>
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnImageTapped" 
+                            CommandParameter="http://cwi.edu/programs-degrees/career-technical-education" />
+                        </Image.GestureRecognizers>
+                    </Image>
+                </ContentView>
 
-        <BoxView Color="Blue"
-                 Opacity="0.5"
-                 Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" />
-    </Grid>
+                <!--Row 2, 2nd Column ScentsyCon-->
+                <ContentView Grid.Row="2" Grid.Column="1">
+                    <Image>
+                        <Image.Source>
+                            <OnPlatform x:TypeArguments="FileImageSource">
+                                <On Platform="iOS" Value="ScentsyCon-logo300x138.jpg" />
+                                <On Platform="Android" Value="ScentsyCon-logo300x138.jpg" />
+                                <On Platform="UWP" Value="Images/ScentsyCon-logo300x138.jpg" />
+                            </OnPlatform>
+                        </Image.Source>
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnImageTapped" 
+                            CommandParameter="http://www.superheroic.org/" />
+                        </Image.GestureRecognizers>
+                    </Image>
+                </ContentView>
+
+                <!--Row 3, 1st Column CWI Connections-->
+                <ContentView Grid.Row="3" Grid.Column="0">
+                    <Image>
+                        <Image.Source>
+                            <OnPlatform x:TypeArguments="FileImageSource">
+                                <On Platform="iOS" Value="cwi-connections-logo300x154.png" />
+                                <On Platform="Android" Value="cwi-connections-logo300x154.png" />
+                                <On Platform="UWP" Value="Images/cwi-connections-logo300x154.png" />
+                            </OnPlatform>
+                        </Image.Source>
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnImageTapped" 
+                            CommandParameter="http://cwi.edu/current-students/connections-project"   />
+                        </Image.GestureRecognizers>
+                    </Image>
+                </ContentView>
+
+                <!--Row 3, 2nd Column Boise Code Camp-->
+                <ContentView Grid.Row="3" Grid.Column="1">
+                    <Image>
+                        <Image.Source>
+                            <OnPlatform x:TypeArguments="FileImageSource">
+                                <On Platform="iOS" Value="Images/BoiseCodeCampLogo300x63.jpg" />
+                                <On Platform="Android" Value="Images/BoiseCodeCampLogo300x63.jpg" />
+                                <On Platform="UWP" Value="Images/BoiseCodeCampLogo300x63.jpg" />
+                            </OnPlatform>
+                        </Image.Source>
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnImageTapped" 
+                            CommandParameter="http://www.boisecodecamp.org/"   />
+                        </Image.GestureRecognizers>
+                    </Image>
+                </ContentView>
+
+                <!--Row 4, 1st Column Stem Out-->
+                <ContentView Grid.Row="4" Grid.Column="0">
+                    <Image>
+                        <Image.Source>
+                            <OnPlatform x:TypeArguments="FileImageSource">
+                                <On Platform="iOS" Value="stem-out-logo284x200.png" />
+                                <On Platform="Android" Value="stem-out-logo284x200.png" />
+                                <On Platform="UWP" Value="Images/stem-out-logo284x200.png" />
+                            </OnPlatform>
+                        </Image.Source>
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnImageTapped" 
+                            CommandParameter="https://cwi.edu/news/news-room/stem-out-event-success"   />
+                        </Image.GestureRecognizers>
+                    </Image>
+                </ContentView>
+
+                <!--Row 4, 2nd Column Hackfort-->
+                <ContentView Grid.Row="4" Grid.Column="1">
+                    <Image>
+                        <Image.Source>
+                            <OnPlatform x:TypeArguments="FileImageSource">
+                                <On Platform="iOS" Value="hackfort-logo300x100.jpg" />
+                                <On Platform="Android" Value="hackfort-logo300x100.jpg" />
+                                <On Platform="UWP" Value="Images/hackfort-logo300x100.jpg" />
+                            </OnPlatform>
+                        </Image.Source>
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnImageTapped" 
+                            CommandParameter="https://www.treefortmusicfest.com/fort/hackfort/"   />
+                        </Image.GestureRecognizers>
+                    </Image>
+                </ContentView>
+            </Grid>
+        </ScrollView>
+
+        <!--Overlay -->
+        <ContentView x:Name="overlay"
+
+                    AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+                    AbsoluteLayout.LayoutFlags="All"
+                    IsVisible="False"
+                    BackgroundColor="#FF808080"
+                    Padding="10, 0" >
+
+            <StackLayout>
+                <Button Text="&#x21D0; Go Back"
+                        TextColor="Bisque"
+                        BackgroundColor="#780000"
+                        FontSize="Medium"
+
+                        HorizontalOptions="Start"
+                        IsEnabled="{Binding CanGoBack}"
+                        Clicked="OnGoBackClicked" />
+
+                <!--<Button Text="&#x21D2;"
+                        TextColor="Bisque"
+                        BackgroundColor="#780000"
+                        FontSize="Medium"
+                        HorizontalOptions="End"
+                        IsEnabled="{Binding CanGoForward}"
+                        Clicked="OnGoForwardClicked" />-->
+
+                <WebView x:Name="webView" 
+                        VerticalOptions="FillAndExpand"  
+                        IsVisible="False" />
+            </StackLayout>
+        </ContentView>
+    </AbsoluteLayout>
 </ContentPage>
