@@ -38,6 +38,29 @@ namespace CWIApp
         //    overlay.IsVisible = false;
         //    webView.GoForward();
         //}
+	
+	void OnToolbarItemEventsClicked(object sender, EventArgs args)
+        {
+            this.Navigation.PushAsync(new EventPage());
 
+        }
+
+        void OnToolbarItemFormsClicked(object sender, EventArgs args)
+        {
+            this.Navigation.PushAsync(new PWPortalPage());
+
+        }
+
+        void OnToolbarItemProjectClicked(object sender, EventArgs args)
+        {
+            this.Navigation.PushAsync(new ProjectPage());
+
+        }
+
+        void OnToolbarItemEmailClicked(object sender, EventArgs args)
+        {
+            this.Navigation.PushAsync(new EmailFormPage());
+
+        }
     }//end class
 }//end namespace
