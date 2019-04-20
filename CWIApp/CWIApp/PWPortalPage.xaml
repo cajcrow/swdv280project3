@@ -1,71 +1,50 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Input;
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"     
+             xmlns:local="clr-namespace:CWIApp.FormPages"
+             x:Class="CWIApp.PWPortalPage">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness"
+        iOS="0, 20, 0, 0" />
+    </ContentPage.Padding>
+    <StackLayout>
+        <Frame BorderColor="Accent">
+            <StackLayout Orientation="Horizontal">
+                <BoxView Color="Red" />
+                <Button Text="Software Development Course Overview"                       
+                       TextColor="Blue"
+                       BorderWidth="0"
+                       Clicked="OnLabelOverviewClicked" />
+            </StackLayout>
+        </Frame>
+        <Frame BorderColor="Accent">
+            <StackLayout Orientation="Horizontal">
+                <BoxView Color="Green" />
+                <Button Text="Internship Form"                       
+                       TextColor="Blue"
+                       BorderWidth="0"
+                       Clicked="OnLabelInternshipClicked" />
 
-namespace CWIApp
-{
-    [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class PWPortalPage : ContentPage
-    {
+            </StackLayout>
+        </Frame>
+        <Frame BorderColor="Accent">
+            <StackLayout Orientation="Horizontal">
+                <BoxView Color="Blue" />
+                <Button Text="Internship Agreement Form"                       
+                       TextColor="Blue"
+                       BorderWidth="0"
+                       Clicked="OnLabelInternAFClicked" />
+            </StackLayout>
+        </Frame>
+        <Frame BorderColor="Accent">
+            <StackLayout Orientation="Horizontal">
+                <BoxView Color="OrangeRed" />
+                <Button Text="Internship Timesheet"                       
+                       TextColor="Blue"
+                       BorderWidth="0"
+                       Clicked="OnLabelInternTSClicked" />
+            </StackLayout>
+        </Frame>
+    </StackLayout>
 
-        public PWPortalPage()
-        {
-            InitializeComponent();
-
-            Title = "SWDV Forms and Documents";
-
-        }
-
-        public void OnLabelOverviewClicked(object sender, EventArgs args)
-        {
-            
-            this.Navigation.PushAsync(new Forms.CourseOverview());
-        }
-
-        public void OnLabelInternshipClicked(object sender, EventArgs args)
-        {
-            
-            this.Navigation.PushAsync(new Forms.InternshipForm());
-        }
-
-        public void OnLabelInternAFClicked(object sender, EventArgs args)
-        {
-           
-            this.Navigation.PushAsync(new Forms.InternAF());
-        }
-
-        public void OnLabelInternTSClicked(object sender, EventArgs args)
-        {
-            
-            this.Navigation.PushAsync(new Forms.InternTS());
-        }
-        void OnToolbarItemEventsClicked(object sender, EventArgs args)
-        {
-            this.Navigation.PushAsync(new EventPage());
-
-        }
-
-        void OnToolbarItemFormsClicked(object sender, EventArgs args)
-        {
-            this.Navigation.PushAsync(new PWPortalPage());
-
-        }
-
-        void OnToolbarItemProjectClicked(object sender, EventArgs args)
-        {
-            this.Navigation.PushAsync(new ProjectPage());
-
-        }
-
-        void OnToolbarItemEmailClicked(object sender, EventArgs args)
-        {
-            this.Navigation.PushAsync(new EmailFormPage());
-
-        }
-    }
-}
+</ContentPage>
