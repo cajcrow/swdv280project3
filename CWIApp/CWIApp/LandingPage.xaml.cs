@@ -22,7 +22,7 @@ namespace CWIApp
                     TextColor = Color.Black,
                     HorizontalOptions = LayoutOptions.Center,
                     VerticalOptions = LayoutOptions.Center},
-                    new Label { Text ="Software development is a broad term for the process of creating software tools in a methodical way.This process can include writing code, preparing requirements and objectives, documenting, and testing.The Software Development program provides a solid foundation in the development of client and server - side applications using .NET and open-source technologies.A business without a website is rare these days, and every website requires a skilled technician to make it functional.This program emphasizes proven programming principles, critical-thinking skills, and practical experience while preparing students to obtain industry-recognized certifications.",
+                    new Label { Text ="CWI’s Software Development two year program allows students to attain an associate of applied science degree (AAS) and industry-recognized Microsoft Technology Associate (MTA) certifications. Students learn the skills to become a full stack developer.  The curriculum covers client- and server-side technologies, as well as, database design.  Mobile application and Unity game development are included as second year subjects.",
                     FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)),
                     TextColor = Color.Black }
                 }
