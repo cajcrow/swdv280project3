@@ -130,11 +130,15 @@
     <Content Include="Assets\Wide310x150Logo.scale-100.png" />
     <Content Include="Assets\Wide310x150Logo.scale-200.png" />
     <Content Include="Assets\Wide310x150Logo.scale-400.png" />
+    <Content Include="Images\Agreement1.jpg" />
+    <Content Include="Images\Agreement2.jpg" />
     <Content Include="Images\briefcase.png" />
     <Content Include="Images\ComputerScienceandTechDept_Logo.jpg" />
     <Content Include="Images\copy-item.png" />
+    <Content Include="Images\CourseOverview.jpg" />
     <Content Include="Images\email.png" />
     <Content Include="Images\star.png" />
+    <Content Include="Images\Timesheet.jpg" />
     <Content Include="Properties\Default.rd.xml" />
   </ItemGroup>
   <ItemGroup>
@@ -156,9 +160,6 @@
       <Project>{ADC6F816-4DAC-42F1-BACA-5280CA88ED70}</Project>
       <Name>CWIApp</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Images\SWDVProgramFlyer_ToolsTaught.pdf" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
