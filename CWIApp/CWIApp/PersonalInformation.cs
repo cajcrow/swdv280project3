@@ -9,7 +9,7 @@ namespace CWIApp
 {
     class PersonalInformation : ViewModelBase
     {
-        string name, emailAddress, phoneNumber;
+        string name, emailAddress, phoneNumber, infoWanted;
         bool wantInfo;
 
         public string Name
@@ -34,6 +34,11 @@ namespace CWIApp
         {
             set { SetProperty(ref wantInfo, value); }
             get { return wantInfo; }
+        }
+        public string Info
+        {
+            set { SetProperty(ref infoWanted, value); }
+            get { return infoWanted; }
         }
     }
 }
