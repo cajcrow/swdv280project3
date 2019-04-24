@@ -86,6 +86,13 @@
 
                     <SwitchCell Text="Do you want information?"
                                 On="{Binding WantInfo}" />
+                  
+                  <ViewCell>
+                        <Entry Text="{Binding Info}"
+                               HeightRequest="250"
+                               WidthRequest="35"
+                               Placeholder="Enter your questions here:"></Entry>
+                    </ViewCell>
                 </TableSection>
             </TableRoot>
         </TableView>
