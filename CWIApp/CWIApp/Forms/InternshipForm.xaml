@@ -1,18 +1,16 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="CWIApp.Forms.InternshipForm">
-    <RelativeLayout>
-        <Image Source="Images/internship_form.png" Opacity="1"
-               Aspect="AspectFit"
-                RelativeLayout.WidthConstraint=
-                  "{ConstraintExpression Type=RelativeToParent, Property=Width}"
-                RelativeLayout.HeightConstraint=
-                  "{ConstraintExpression Type=RelativeToParent, Property=Height}"/>
-        <Grid RelativeLayout.WidthConstraint=
-              "{ConstraintExpression Type=RelativeToParent, Property=Width}"
-            RelativeLayout.HeightConstraint=
-              "{ConstraintExpression Type=RelativeToParent, Property=Height}">
-        </Grid>
-    </RelativeLayout>
+             xmlns:local="clr-namespace:CWIApp"
+             xmlns:syncfusion="clr-namespace:Syncfusion.SfPdfViewer.XForms;assembly=Syncfusion.SfPdfViewer.XForms"
+             xmlns:local1="clr-namespace:CWIApp" x:Class="CWIApp.Forms.InternshipForm">
+
+    <ContentPage.BindingContext>
+        <local1:InternFormView/>
+    </ContentPage.BindingContext>
+
+    <Grid x:Name="pdfViewGrid">
+        <syncfusion:SfPdfViewer x:Name="pdfViewerControl" InputFileStream="{Binding PdfDocumentStream}"/>
+    </Grid>
+
 </ContentPage>
