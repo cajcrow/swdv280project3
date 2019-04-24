@@ -1,12 +1,56 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="CWIApp.ProjectPage">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+             xmlns:local="clr-namespace:CWIApp"
+             x:Class="CWIApp.ProjectPage"
+             Title="CWI Software Development App">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Events" 
+                     Order="Primary"
+                     Clicked="OnToolbarItemEventsClicked">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="iOS" Value="edit.png" />
+                    <On Platform="Android" Value="ic_action_edit.png" />
+                    <On Platform="UWP" Value="Images/star.png" />
+                </OnPlatform>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+
+        <ToolbarItem Text="Student Forms"
+                     Order="Primary"
+                     Clicked="OnToolbarItemFormsClicked">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="iOS" Value="search.png" />
+                    <On Platform="Android" Value="ic_action_search.png" />
+                    <On Platform="UWP" Value="Images/copy-item.png" />
+                </OnPlatform>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+
+        <ToolbarItem Text="Projects"
+                     Order="Primary"
+                     Clicked="OnToolbarItemProjectClicked">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="iOS" Value="reload.png" />
+                    <On Platform="Android" Value="ic_action_refresh.png" />
+                    <On Platform="UWP" Value="Images/briefcase.png" />
+                </OnPlatform>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+
+        <ToolbarItem Text="Sign-Up"
+                     Order="Primary"
+                     Clicked="OnToolbarItemEmailClicked">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="iOS" Value="reload.png" />
+                    <On Platform="Android" Value="ic_action_refresh.png" />
+                    <On Platform="UWP" Value="Images/email.png" />
+                </OnPlatform>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
 </ContentPage>

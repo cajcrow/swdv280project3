@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CWIApp.LandingPage"
@@ -7,9 +7,9 @@
     <Label x:Name="label"
            FontSize="Medium"
            HorizontalOptions="Center"
-           VerticalOptions="Center" />    
-    
-    <ContentPage.ToolbarItems>        
+           VerticalOptions="Center" />
+
+    <ContentPage.ToolbarItems>
         <ToolbarItem Text="Events" 
                      Order="Primary"
                      Clicked="OnToolbarItemEventsClicked">
@@ -17,9 +17,9 @@
                 <OnPlatform x:TypeArguments="FileImageSource">
                     <On Platform="iOS" Value="edit.png" />
                     <On Platform="Android" Value="ic_action_edit.png" />
-                    <On Platform="UWP, WinRT, WinPhone" Value="Images/star.png" />
+                    <On Platform="UWP" Value="Images/star.png" />
                 </OnPlatform>
-            </ToolbarItem.Icon>           
+            </ToolbarItem.Icon>
         </ToolbarItem>
 
         <ToolbarItem Text="Student Forms"
@@ -29,7 +29,7 @@
                 <OnPlatform x:TypeArguments="FileImageSource">
                     <On Platform="iOS" Value="search.png" />
                     <On Platform="Android" Value="ic_action_search.png" />
-                    <On Platform="UWP, WinRT, WinPhone" Value="Images/copy-item.png" />
+                    <On Platform="UWP" Value="Images/copy-item.png" />
                 </OnPlatform>
             </ToolbarItem.Icon>
         </ToolbarItem>
@@ -41,7 +41,7 @@
                 <OnPlatform x:TypeArguments="FileImageSource">
                     <On Platform="iOS" Value="reload.png" />
                     <On Platform="Android" Value="ic_action_refresh.png" />
-                    <On Platform="UWP, WinRT, WinPhone" Value="Images/briefcase.png" />
+                    <On Platform="UWP" Value="Images/briefcase.png" />
                 </OnPlatform>
             </ToolbarItem.Icon>
         </ToolbarItem>
@@ -53,38 +53,7 @@
                 <OnPlatform x:TypeArguments="FileImageSource">
                     <On Platform="iOS" Value="reload.png" />
                     <On Platform="Android" Value="ic_action_refresh.png" />
-                    <On Platform="UWP, WinRT, WinPhone" Value="Images/email.png" />
-                </OnPlatform>
-            </ToolbarItem.Icon>
-        </ToolbarItem>
-
-
-        <ToolbarItem Text="explore"
-                     Order="Secondary"
-                     Clicked="OnToolbarItemClicked">
-            <ToolbarItem.Icon>
-                <OnPlatform x:TypeArguments="FileImageSource">
-                    <On Platform="UWP, WinRT, WinPhone" Value="Images/Icon1F52D.png" />
-                </OnPlatform>
-            </ToolbarItem.Icon>
-        </ToolbarItem>
-
-        <ToolbarItem Text="discover"
-                     Order="Secondary"
-                     Clicked="OnToolbarItemClicked">
-            <ToolbarItem.Icon>
-                <OnPlatform x:TypeArguments="FileImageSource">
-                    <On Platform="UWP, WinRT, WinPhone" Value="Images/Icon1F440.png" />
-                </OnPlatform>
-            </ToolbarItem.Icon>
-        </ToolbarItem>
-
-        <ToolbarItem Text="evolve"
-                     Order="Secondary"
-                     Clicked="OnToolbarItemClicked">
-            <ToolbarItem.Icon>
-                <OnPlatform x:TypeArguments="FileImageSource">
-                    <On Platform="UWP, WinRT, WinPhone" Value="Images/Icon1F435.png" />
+                    <On Platform="UWP" Value="Images/email.png" />
                 </OnPlatform>
             </ToolbarItem.Icon>
         </ToolbarItem>

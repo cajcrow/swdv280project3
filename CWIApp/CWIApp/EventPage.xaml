@@ -1,46 +1,198 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              Title="Events Page"
              x:Class="CWIApp.EventPage">
+
     <ContentPage.Padding>
         <OnPlatform x:TypeArguments="Thickness">
             <On Platform="iOS" Value="0, 20, 0, 0" />
+            <On Platform="UWP" Value="10,0" />
         </OnPlatform>
     </ContentPage.Padding>
-    
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="100" />
-            <RowDefinition Height="2*" />
-            <RowDefinition Height="1*" />
-        </Grid.RowDefinitions>
 
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-        </Grid.ColumnDefinitions>        
-
-        <Image BackgroundColor="Red"
-               Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2">
-            <Image.Source>
-                <OnPlatform x:TypeArguments="ImageSource">
-                    <On Platform="iOS" Value="Icon-60.png" />
-                    <On Platform="Android" Value="icon.png" />
-                    <On Platform="UWP" Value="Images/ComputerScienceandTechDept_Logo.jpg" />
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Events" 
+                     Order="Primary"
+                     Clicked="OnToolbarItemEventsClicked">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="iOS" Value="edit.png" />
+                    <On Platform="Android" Value="ic_action_edit.png" />
+                    <On Platform="UWP" Value="Images/star.png" />
                 </OnPlatform>
-            </Image.Source>
-        </Image>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
 
-        <BoxView Color="Green"
-                 Grid.Row="2" Grid.Column="0" />
+        <ToolbarItem Text="Student Forms"
+                     Order="Primary"
+                     Clicked="OnToolbarItemFormsClicked">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="iOS" Value="search.png" />
+                    <On Platform="Android" Value="ic_action_search.png" />
+                    <On Platform="UWP" Value="Images/copy-item.png" />
+                </OnPlatform>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
 
-        <BoxView Color="Red"
-                 Grid.Row="2" Grid.Column="1" Grid.RowSpan="2" />
+        <ToolbarItem Text="Projects"
+                     Order="Primary"
+                     Clicked="OnToolbarItemProjectClicked">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="iOS" Value="reload.png" />
+                    <On Platform="Android" Value="ic_action_refresh.png" />
+                    <On Platform="UWP" Value="Images/briefcase.png" />
+                </OnPlatform>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
 
-        <BoxView Color="Blue"
-                 Opacity="0.5"
-                 Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" />
-    </Grid>
+        <ToolbarItem Text="Sign-Up"
+                     Order="Primary"
+                     Clicked="OnToolbarItemEmailClicked">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="iOS" Value="reload.png" />
+                    <On Platform="Android" Value="ic_action_refresh.png" />
+                    <On Platform="UWP" Value="Images/email.png" />
+                </OnPlatform>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
+  
+ <ScrollView>
+        <StackLayout Margin="20,35,20,20">
+            <StackLayout.Resources>
+                <ResourceDictionary>
+                    <Style x:Key="titleLabel"
+                    TargetType="Label"
+                    BaseResourceKey="TitleStyle">
+                        <Setter Property="TextColor" Value="Black" />
+                        <Setter Property="HorizontalTextAlignment" Value="Center" />
+                    </Style>
+                    <!--Implicit styles-->
+                    <Style TargetType="Label"
+                    BaseResourceKey="BodyStyle">
+                        <Setter Property="TextColor" Value="Black" />
+                    </Style>
+                    <Style TargetType="Image">
+                        <Setter Property="WidthRequest" Value="240" />
+                    </Style>
+                </ResourceDictionary>
+            </StackLayout.Resources>
+
+            <!--Page Title-->
+            <Label Text="Events"
+                Style="{DynamicResource titleLabel}" />
+
+            <!--CWI Software Development-->
+            <Label Text="CWI Software Development"
+               TextColor="Blue"
+               TextDecorations="Underline">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding TapCommand}"
+                       CommandParameter="http://cwi.edu/program/software-development" />
+                </Label.GestureRecognizers>
+            </Label>
+            <Label Text=
+"Learn more about the cost, course outlines, and requirements
+for CWI's Software Development program." />
+
+            <Image>
+                <Image.Source>
+                    <OnPlatform x:TypeArguments="ImageSource">
+                        <On Platform="iOS" Value="CWISoftwareDevelopment.jpg" />
+                        <On Platform="Android" Value="CWISoftwareDevelopment.jpg" />
+                        <On Platform="UWP" Value="Images/CWISoftwareDevelopment.jpg" />
+                    </OnPlatform>
+                </Image.Source>
+            </Image>
+            
+            <!--List of Community Events-->
+            <Label Text=
+"To promote the importance of technology in education, the students and staff
+of the software development program support these community events:  " 
+        FontAttributes="Bold"/>
+
+            <!--CWI Connections Project -->
+            <Label Text="CWI Connections Project"
+               TextColor="Blue"
+               TextDecorations="Underline">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding TapCommand}"
+                       CommandParameter="http://cwi.edu/current-students/connections-project" />
+                </Label.GestureRecognizers>
+            </Label>
+            <Label Text=
+"The CWI Connections Project is an opportunity to bring together students, faculty, staff, and the community to celebrate culture, collaboration, education, innovation, and achievement.  " />
+
+            <!--STEM Out!-->
+            <Label Text="STEM Out!"
+               TextColor="Blue"
+               TextDecorations="Underline">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding TapCommand}"
+                       CommandParameter="https://cwi.edu/news/news-room/stem-out-event-success" />
+                </Label.GestureRecognizers>
+            </Label>
+            <Label Text=
+"STEM Out! provides students (ages 10-15) with hands-on, break-out sessions
+centering on STEM and STEM-related programs available at CWI." />
+            
+            <Image>
+                <Image.Source>
+                    <OnPlatform x:TypeArguments="ImageSource">
+                        <On Platform="iOS" Value="IMG_0917.jpg" />
+                        <On Platform="Android" Value="IMG_0917.jpg" />
+                        <On Platform="UWP" Value="Images/IMG_0917.jpg" />
+                    </OnPlatform>
+                </Image.Source>
+            </Image>
+            
+            <!--Scentsy Con -->
+            <Label Text="Scentsy Con"
+               TextColor="Blue"
+               TextDecorations="Underline">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding TapCommand}"
+                       CommandParameter="http://www.superheroic.org/" />
+                </Label.GestureRecognizers>
+            </Label>
+            <Label Text=
+"Scentsy Con is a free family-oriented tech fair showcasing STEM-related
+technology, such as engineering, virtual reality, and robotics. Other
+activities include cosplay, martial arts demonstrations, and games with
+prizes for participants." />
+            
+            <!--Boise Code Camp-->
+            <Label Text="Boise Code Camp"
+               TextColor="Blue"
+               TextDecorations="Underline">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding TapCommand}"
+                       CommandParameter="http://www.boisecodecamp.org/" />
+                </Label.GestureRecognizers>
+            </Label>
+            <Label Text=
+"Boise Code Camp is a free one-day event for developers, hardware
+geeks, and the curious to come and learn from their peers." />
+
+            <!--Hackfort-->
+            <Label Text="Hackfort"
+               TextColor="Blue"
+               TextDecorations="Underline">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding TapCommand}"
+                       CommandParameter="https://www.treefortmusicfest.com/fort/hackfort/" />
+                </Label.GestureRecognizers>
+            </Label>
+            <Label Text=
+"Hackfort is about celebrating all things tech with discussions,
+workshops, and TED-style talks that explore the intersection of
+technology with education, civic life, and the arts." />
+
+        </StackLayout>
+</ScrollView>
+    
 </ContentPage>

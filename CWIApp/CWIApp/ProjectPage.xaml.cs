@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,28 +9,51 @@ using Xamarin.Forms.Xaml;
 
 namespace CWIApp
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class ProjectPage : ContentPage
-	{
-		public ProjectPage ()
-		{
-			InitializeComponent ();
-
-            BackgroundColor = Color.Red;
-            Content = new Frame
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class ProjectPage : ContentPage
+    {
+        public ProjectPage()
+        {
+            InitializeComponent();
+            BackgroundColor = Color.Crimson;
+            Content = new StackLayout
             {
-                OutlineColor = Color.Black,
-                BackgroundColor = Color.White,
-                HorizontalOptions = LayoutOptions.Center,
-                VerticalOptions = LayoutOptions.Center,
-                Content = new Label
+                Children =
                 {
-                    Text = "This is the Project Page!",
+                    new Image { Source = ImageSource.FromResource("CWIApp.Images.Logo.jpg")},
+                    new Label {
+                    Text = "Under Construction",
                     FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label)),
                     FontAttributes = FontAttributes.Italic,
-                    TextColor = Color.Red
+                    TextColor = Color.WhiteSmoke,
+                    HorizontalOptions = LayoutOptions.Center,
+                    VerticalOptions = LayoutOptions.Center}
                 }
             };
         }
-	}
+
+        void OnToolbarItemEventsClicked(object sender, EventArgs args)
+        {
+            this.Navigation.PushAsync(new EventPage());
+
+        }
+
+        void OnToolbarItemFormsClicked(object sender, EventArgs args)
+        {
+            this.Navigation.PushAsync(new PWPortalPage());
+
+        }
+
+        void OnToolbarItemProjectClicked(object sender, EventArgs args)
+        {
+            this.Navigation.PushAsync(new ProjectPage());
+
+        }
+
+        void OnToolbarItemEmailClicked(object sender, EventArgs args)
+        {
+            this.Navigation.PushAsync(new EmailFormPage());
+
+        }
+    }
 }
