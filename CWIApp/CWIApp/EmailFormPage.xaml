@@ -115,7 +115,7 @@
                         <Entry Text="{Binding Info}"
                                HeightRequest="250"
                                WidthRequest="35"
-                               Placeholder="Enter your questions here:"></Entry>
+                               Placeholder="Enter any additional questions here:"></Entry>
                     </ViewCell>
                   
                   <ViewCell>
