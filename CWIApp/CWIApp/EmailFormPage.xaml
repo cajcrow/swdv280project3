@@ -82,16 +82,46 @@
                     <EntryCell Label="Phone:"
                                Text="{Binding PhoneNumber}"
                                Placeholder="Phone Number"
-                               Keyboard="Telephone" />
+                               Keyboard="Telephone" />\
+                  
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="I would like:" />
+                        </StackLayout>
+                    </ViewCell> 
 
-                    <SwitchCell Text="Do you want information?"
+                    <SwitchCell Text="To schedule a meeting with an insructor?"
                                 On="{Binding WantInfo}" />
+
+                    <SwitchCell Text="Information on first year courses?"
+                                On="{Binding FirstYear}" />
+
+                    <SwitchCell Text="Information on second year courses?"
+                                On="{Binding SecondYear}" />
+
+                    <SwitchCell Text="Information on scholarship availabilty?"
+                                On="{Binding Scholarship}" />
+
+                    <SwitchCell Text="Help with how current credits will transfer to CWI?"
+                                On="{Binding Credits}" />
+
+                    <SwitchCell Text="Help with the structure of how career technical education classes work?"
+                                On="{Binding Structure}" />
+
+                    <SwitchCell Text="Help with enrolling in the software development program?"
+                                On="{Binding Enroll}" />
                   
                   <ViewCell>
                         <Entry Text="{Binding Info}"
                                HeightRequest="250"
                                WidthRequest="35"
                                Placeholder="Enter your questions here:"></Entry>
+                    </ViewCell>
+                  
+                  <ViewCell>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="*Be aware that during June, July, and early August, instructor availability is limited. Please contact Jessica Chapple, jessicachapple@cwidaho.cc at (208) 562-2618, for immediate assistance.*" />                                   
+                        </StackLayout>
                     </ViewCell>
                 </TableSection>
             </TableRoot>
