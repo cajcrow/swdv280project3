@@ -35,6 +35,49 @@ namespace CWIApp
             set { SetProperty(ref wantInfo, value); }
             get { return wantInfo; }
         }
+        
+         public bool FirstYear
+        {
+            set { SetProperty(ref firstYear, value); }
+            get { return firstYear; }
+        }
+
+        public bool SecondYear
+        {
+            set { SetProperty(ref secondYear, value); }
+            get { return secondYear; }
+        }
+
+        public bool Scholarship
+        {
+            set { SetProperty(ref scholarship, value); }
+            get { return scholarship; }
+        }       
+
+        public bool Credits
+        {
+            set { SetProperty(ref credits, value); }
+            get { return credits; }
+        }
+
+        public bool Structure
+        {
+            set { SetProperty(ref structure, value); }
+            get { return structure; }
+        }
+
+        public bool Enroll
+        {
+            set { SetProperty(ref enroll, value); }
+            get { return enroll; }
+        }
+
+        public string Info
+        {
+            set { SetProperty(ref infoWanted, value); }
+            get { return infoWanted; }
+        }
+    
         public string Info
         {
             set { SetProperty(ref infoWanted, value); }
