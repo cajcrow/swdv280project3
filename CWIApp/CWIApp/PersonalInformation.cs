@@ -10,7 +10,7 @@ namespace CWIApp
     class PersonalInformation : ViewModelBase
     {
         string name, emailAddress, phoneNumber, infoWanted;
-        bool wantInfo;
+        bool wantInfo, firstYear, secondYear, scholarship, credits, structure, enroll;
 
         public string Name
         {
@@ -72,12 +72,6 @@ namespace CWIApp
             get { return enroll; }
         }
 
-        public string Info
-        {
-            set { SetProperty(ref infoWanted, value); }
-            get { return infoWanted; }
-        }
-    
         public string Info
         {
             set { SetProperty(ref infoWanted, value); }
