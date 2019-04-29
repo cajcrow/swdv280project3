@@ -22,12 +22,19 @@ namespace CWIApp
                 {
                     new Image { Source = ImageSource.FromResource("CWIApp.Images.Logo.jpg")},
                     new Label {
-                    Text = "Under Construction",
-                    FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label)),
-                    FontAttributes = FontAttributes.Italic,
-                    TextColor = Color.WhiteSmoke,
-                    HorizontalOptions = LayoutOptions.Center,
-                    VerticalOptions = LayoutOptions.Center}
+                        Text = "Coming Soon",
+                        FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label)),
+                        FontAttributes = FontAttributes.Bold,
+                        TextColor = Color.Black,
+                        HorizontalOptions = LayoutOptions.Center,
+                        VerticalOptions = LayoutOptions.Center},
+                    new Label{
+                        Text ="Hand picked student projects from each semester showcasing what they've learned.",
+                        FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)),
+                        TextColor = Color.Black,
+                        HorizontalOptions = LayoutOptions.Center,
+                        VerticalOptions = LayoutOptions.Center
+                    }
                 }
             };
         }
