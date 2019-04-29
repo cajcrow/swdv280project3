@@ -1,3 +1,6 @@
 stacklayout {
     margin: 5, 20, 15, 5;
 }
+^contentpage{
+    background-color: #e3e4c2;
+}
