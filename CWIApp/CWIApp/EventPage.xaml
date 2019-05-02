@@ -12,6 +12,18 @@
     </ContentPage.Padding>
 
     <ContentPage.ToolbarItems>
+         <ToolbarItem Text="Home" 
+                     Order="Primary"
+                     Clicked="OnToolbarItemHomeClicked">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="iOS" Value="home.png" />
+                    <On Platform="Android" Value="ic_action_home.png" />
+                    <On Platform="UWP" Value="Images/home.png" />
+                </OnPlatform>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+      
         <ToolbarItem Text="Events" 
                      Order="Primary"
                      Clicked="OnToolbarItemEventsClicked">
