@@ -8,8 +8,7 @@ namespace CWIApp
         public LandingPage()
         {
             InitializeComponent();
-
-            BackgroundColor = Color.White;
+            
             Content = new StackLayout
             {
                 Children =
