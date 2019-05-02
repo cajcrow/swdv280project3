@@ -29,6 +29,13 @@ namespace CWIApp
                 personalInfo.EmailAddress, personalInfo.PhoneNumber,
                 personalInfo.WantInfo ? "" : "not ");
         }
+        
+         void OnToolbarItemHomeClicked(object sender, EventArgs args)
+        {
+            this.Navigation.PushAsync(new LandingPage());
+
+        }
+        
         void OnToolbarItemEventsClicked(object sender, EventArgs args)
         {
             this.Navigation.PushAsync(new EventPage());
