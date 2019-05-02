@@ -38,6 +38,12 @@ namespace CWIApp
                 }
             };
         }
+        
+         void OnToolbarItemHomeClicked(object sender, EventArgs args)
+        {
+            this.Navigation.PushAsync(new LandingPage());
+
+        }
 
         void OnToolbarItemEventsClicked(object sender, EventArgs args)
         {
