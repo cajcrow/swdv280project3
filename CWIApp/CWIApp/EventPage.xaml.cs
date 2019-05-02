@@ -20,6 +20,12 @@ namespace CWIApp
         {
             Device.OpenUri(new Uri(url));
         }
+	
+	 void OnToolbarItemHomeClicked(object sender, EventArgs args)
+        {
+            this.Navigation.PushAsync(new LandingPage());
+
+        }
 
         void OnToolbarItemEventsClicked(object sender, EventArgs args)
         {
