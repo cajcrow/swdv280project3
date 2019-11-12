@@ -24,9 +24,9 @@ namespace CWIApp
 
             summaryLabel.Text = String.Format(
                 "{0} has an email address " +
-                "of {2}, and a phone number of {3}, and is {4}" +
+                "of {1}, and a phone number of {2}, and is {3}" +
                 "a programmer.",
-                personalInfo.EmailAddress, personalInfo.PhoneNumber,
+                personalInfo.Name, personalInfo.EmailAddress, personalInfo.PhoneNumber,
                 personalInfo.WantInfo ? "" : "not ");
         }
         

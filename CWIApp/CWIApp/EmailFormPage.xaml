@@ -94,8 +94,8 @@
                     <EntryCell Label="Phone:"
                                Text="{Binding PhoneNumber}"
                                Placeholder="Phone Number"
-                               Keyboard="Telephone" />\
-                  
+                               Keyboard="Telephone" />
+
                     <ViewCell>
                         <StackLayout Orientation="Horizontal">
                             <Label Text="I would like:" />
