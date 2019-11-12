@@ -2,15 +2,19 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:CWIApp"
-             xmlns:syncfusion="clr-namespace:Syncfusion.SfPdfViewer.XForms;assembly=Syncfusion.SfPdfViewer.XForms"
              xmlns:local1="clr-namespace:CWIApp" x:Class="CWIApp.Forms.InternshipForm">
+    <!--<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:CWIApp"
+             xmlns:syncfusion="clr-namespace:Syncfusion.SfPdfViewer.XForms;assembly=Syncfusion.SfPdfViewer.XForms"
+             xmlns:local1="clr-namespace:CWIApp" x:Class="CWIApp.Forms.InternshipForm">-->
 
     <ContentPage.BindingContext>
         <local1:InternFormView/>
     </ContentPage.BindingContext>
 
     <Grid x:Name="pdfViewGrid">
-        <syncfusion:SfPdfViewer x:Name="pdfViewerControl" InputFileStream="{Binding PdfDocumentStream}"/>
+        <!--<syncfusion:SfPdfViewer x:Name="pdfViewerControl" InputFileStream="{Binding PdfDocumentStream}"/>-->
     </Grid>
 
 </ContentPage>
