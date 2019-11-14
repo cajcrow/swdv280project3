@@ -137,6 +137,7 @@
     <Content Include="Images\copy-item.png" />
     <Content Include="Images\CourseOverview.jpg" />
     <Content Include="Images\email.png" />
+    <Content Include="Images\home.png" />
     <Content Include="Images\star.png" />
     <Content Include="Images\Timesheet.jpg" />
     <Content Include="Properties\Default.rd.xml" />
