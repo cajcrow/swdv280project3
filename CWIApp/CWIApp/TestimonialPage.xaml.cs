@@ -12,7 +12,7 @@ namespace CWIApp
         {
             InitializeComponent();
 
-            Content = new StackLayout
+            var stackContent = new StackLayout
             {
                 Children =
                 {
@@ -33,7 +33,7 @@ namespace CWIApp
                     FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)),
                     TextColor = Color.Black,
                     Margin = 20},
-                                        
+
                     new Label { Text ="We would like the interns, CWI, and our company to create and design a portal for the internship program. -Bruce Sanders",
                     FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)),
                     TextColor = Color.Black,
@@ -44,6 +44,7 @@ namespace CWIApp
                     Margin = 30}
                 }
             };
+            Content = new ScrollView { Content = stackContent };
         }
 
         void OnToolbarItemHomeClicked(object sender, EventArgs args)
