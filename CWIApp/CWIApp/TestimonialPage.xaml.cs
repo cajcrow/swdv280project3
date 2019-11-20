@@ -1,14 +1,17 @@
 ﻿using System;
+
 using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
 namespace CWIApp
 {
-    public partial class LandingPage : ContentPage
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class TestimonialPage : ContentPage
     {
-        public LandingPage()
+        public TestimonialPage()
         {
             InitializeComponent();
-            
+
             Content = new StackLayout
             {
                 Children =
@@ -25,16 +28,25 @@ namespace CWIApp
                     HorizontalOptions = LayoutOptions.Center,
                     VerticalOptions = LayoutOptions.Center,
                     Margin = 30},
-                    /*Create and style Body text*/
-                    new Label { Text ="CWI’s Software Development two year program allows students to attain an associate of applied science degree (AAS) and industry-recognized Microsoft Technology Associate (MTA) certifications. Students learn the skills to become a full stack developer.  The curriculum covers client- and server-side technologies, as well as, database design.  Mobile application and Unity game development are included as second year subjects.",
+                                      /*Create and style Body text*/
+                    new Label { Text ="I currently have interns helping out. They are bright, energetic and have received valuable instruction to date. They have become an indispensable part of the IT program at CFK. -Michael Swenson",
+                    FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)),
+                    TextColor = Color.Black,
+                    Margin = 20},
+                                        
+                    new Label { Text ="We would like the interns, CWI, and our company to create and design a portal for the internship program. -Bruce Sanders",
+                    FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)),
+                    TextColor = Color.Black,
+                    Margin = 20},
+                    new Label { Text ="I made a program that shows the dire consequences of using a program to make fun of your teacher, use it for funny results - A Prankster",
                     FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)),
                     TextColor = Color.Black,
                     Margin = 30}
                 }
             };
         }
-        
-         void OnToolbarItemHomeClicked(object sender, EventArgs args)
+
+        void OnToolbarItemHomeClicked(object sender, EventArgs args)
         {
             this.Navigation.PushAsync(new LandingPage());
 
@@ -42,14 +54,14 @@ namespace CWIApp
 
         void OnToolbarItemEventsClicked(object sender, EventArgs args)
         {
-            this.Navigation.PushAsync(new EventPage());           
+            this.Navigation.PushAsync(new EventPage());
 
         }
- 
+
         void OnToolbarItemFormsClicked(object sender, EventArgs args)
-        {            
+        {
             this.Navigation.PushAsync(new PWPortalPage());
-           
+
         }
 
         void OnToolbarItemProjectClicked(object sender, EventArgs args)
