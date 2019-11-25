@@ -119,6 +119,10 @@ for CWI's Software Development program." />
                         <On Platform="UWP" Value="Images/CWISoftwareDevelopment.jpg" />
                     </OnPlatform>
                 </Image.Source>
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding TapCommand}"
+                       CommandParameter="http://cwi.edu/program/software-development"/>
+                </Image.GestureRecognizers>
             </Image>
             
             <!--List of Community Events-->
@@ -138,6 +142,20 @@ of the software development program support these community events:  "
             </Label>
             <Label Text=
 "The CWI Connections Project is an opportunity to bring together students, faculty, staff, and the community to celebrate culture, collaboration, education, innovation, and achievement.  " />
+            <Image HorizontalOptions="FillAndExpand"
+                   VerticalOptions="CenterAndExpand">
+                <Image.Source>
+                    <OnPlatform x:TypeArguments="ImageSource">
+                        <On Platform="iOS" Value="CWIConnections.png" />
+                        <On Platform="Android" Value="CWIConnections.png" />
+                        <On Platform="UWP" Value="Images/CWIConnections.png" />
+                    </OnPlatform>
+                </Image.Source>
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding TapCommand}"
+                       CommandParameter="http://cwi.edu/current-students/connections-project"/>
+                </Image.GestureRecognizers>
+            </Image>
 
             <!--STEM Out!-->
             <Label Text="STEM Out!"
@@ -151,6 +169,20 @@ of the software development program support these community events:  "
             <Label Text=
 "STEM Out! provides students (ages 10-15) with hands-on, break-out sessions
 centering on STEM and STEM-related programs available at CWI." />
+            <Image HorizontalOptions="FillAndExpand"
+                   VerticalOptions="CenterAndExpand">
+                <Image.Source>
+                    <OnPlatform x:TypeArguments="ImageSource">
+                        <On Platform="iOS" Value="STEMOut.jpg" />
+                        <On Platform="Android" Value="STEMOut.jpg" />
+                        <On Platform="UWP" Value="Images/STEMOut.jpg" />
+                    </OnPlatform>
+                </Image.Source>
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding TapCommand}"
+                       CommandParameter="https://cwi.edu/news/news-room/stem-out-event-success"/>
+                </Image.GestureRecognizers>
+            </Image>
             
             <Image>
                 <Image.Source>
@@ -176,6 +208,20 @@ centering on STEM and STEM-related programs available at CWI." />
 technology, such as engineering, virtual reality, and robotics. Other
 activities include cosplay, martial arts demonstrations, and games with
 prizes for participants." />
+            <Image HorizontalOptions="FillAndExpand"
+                   VerticalOptions="CenterAndExpand">
+                <Image.Source>
+                    <OnPlatform x:TypeArguments="ImageSource">
+                        <On Platform="iOS" Value="ScentsyCon.jpg" />
+                        <On Platform="Android" Value="ScentsyCon.jpg" />
+                        <On Platform="UWP" Value="Images/ScentsyCon.jpg" />
+                    </OnPlatform>
+                </Image.Source>
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding TapCommand}"
+                       CommandParameter="http://www.superheroic.org/"/>
+                </Image.GestureRecognizers>
+            </Image>
             
             <!--Boise Code Camp-->
             <Label Text="Boise Code Camp"
@@ -189,6 +235,20 @@ prizes for participants." />
             <Label Text=
 "Boise Code Camp is a free one-day event for developers, hardware
 geeks, and the curious to come and learn from their peers." />
+            <Image HorizontalOptions="FillAndExpand"
+                   VerticalOptions="CenterAndExpand">
+                <Image.Source>
+                    <OnPlatform x:TypeArguments="ImageSource">
+                        <On Platform="iOS" Value="BoiseCodeCamp.jpg" />
+                        <On Platform="Android" Value="BoiseCodeCamp.jpg" />
+                        <On Platform="UWP" Value="Images/BoiseCodeCamp.jpg" />
+                    </OnPlatform>
+                </Image.Source>
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding TapCommand}"
+                       CommandParameter="http://www.boisecodecamp.org/"/>
+                </Image.GestureRecognizers>
+            </Image>
 
             <!--Hackfort-->
             <Label Text="Hackfort"
@@ -203,6 +263,20 @@ geeks, and the curious to come and learn from their peers." />
 "Hackfort is about celebrating all things tech with discussions,
 workshops, and TED-style talks that explore the intersection of
 technology with education, civic life, and the arts." />
+            <Image HorizontalOptions="FillAndExpand"
+                   VerticalOptions="CenterAndExpand">
+                <Image.Source>
+                    <OnPlatform x:TypeArguments="ImageSource">
+                        <On Platform="iOS" Value="Hackfort1.jpg" />
+                        <On Platform="Android" Value="Hackfort1.jpg" />
+                        <On Platform="UWP" Value="Images/Hackfort1.jpg" />
+                    </OnPlatform>
+                </Image.Source>
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding TapCommand}"
+                       CommandParameter="https://www.treefortmusicfest.com/fort/hackfort/"/>
+                </Image.GestureRecognizers>
+            </Image>
 
         </StackLayout>
 </ScrollView>
