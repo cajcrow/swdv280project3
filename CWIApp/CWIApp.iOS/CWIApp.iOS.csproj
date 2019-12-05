@@ -157,4 +157,22 @@
       <Name>CWIApp</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ScentsyCon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\STEMOut.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\BoiseCodeCamp.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\CWIConnections.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Hackfort1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Hackfort2.jpg" />
+  </ItemGroup>
 </Project>
