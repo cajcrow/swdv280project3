@@ -14,7 +14,7 @@ namespace CWIApp
                 Children =
                 {
                     /*Create and style Top Image*/
-                    new Image { Source = ImageSource.FromResource("CWIApp.Images.Logo.jpg"),
+                    new Image { Source = ImageSource.FromResource("CWIApp.Images.OldLogo.jpg"),
                     Margin = 30},
                     /*Create and style Body Title text*/
                     new Label {

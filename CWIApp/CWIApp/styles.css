@@ -1,8 +1,8 @@
 ﻿/* CWI App Styles Page. 11/20/2019 */
 
-base {
-    background-color: lightgray;
-    color: #4a4a4a;
+ContentPage {
+    background-color: #cdcd9b;
+    color: black;
 }
 
 /* Page Styles */
@@ -59,8 +59,8 @@ button {
                 border-color: #4a4a4a;
             }*/
 
-    /* Label Styles */
-    label {
-        color: black;
-        font-weight: bold;
-    }
+/* Label Styles */
+label {
+    color: black;
+    font-weight: bold;
+}
