@@ -6,9 +6,12 @@
              x:Class="CWIApp.EmailFormPage">
     <ContentPage.Padding>
         <OnPlatform x:TypeArguments="Thickness">
-            <On Platform="iOS" Value="0, 20, 0, 0" />
+            <On Platform="iOS" Value="10, 20, 0, 0" />
+            <On Platform="UWP" Value="10, 20, 0, 0" />
+            <On Platform="Android" Value="10, 20, 0, 0" />
         </OnPlatform>
     </ContentPage.Padding>
+    
 <ContentPage.ToolbarItems>
          <ToolbarItem Text="Home" 
                      Order="Primary"
@@ -70,10 +73,12 @@
             </ToolbarItem.Icon>
         </ToolbarItem>
     </ContentPage.ToolbarItems>
-  
+
     <StackLayout>
         <TableView x:Name="tableView"
                    Intent="Form">
+            
+            
 
             <TableView.BindingContext>
                 <local:PersonalInformation />

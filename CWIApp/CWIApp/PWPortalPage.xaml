@@ -5,7 +5,7 @@
              x:Class="CWIApp.PWPortalPage">
     <ContentPage.Padding>
         <OnPlatform x:TypeArguments="Thickness"
-        iOS="0, 20, 0, 0" />
+        iOS="2, 20, 0, 0" Android="2, 20, 0, 0" Default="2, 20, 0, 0" WinPhone="4, 20, 4, 4"/>
     </ContentPage.Padding>
   <ContentPage.ToolbarItems>
          <ToolbarItem Text="Home" 
@@ -69,40 +69,36 @@
         </ToolbarItem>
     </ContentPage.ToolbarItems>
     <StackLayout>
-        <Frame BorderColor="Accent">
-            <StackLayout Orientation="Horizontal">
+        <Frame StyleClass="portalPageFrameSC">
+            <StackLayout Orientation="Horizontal" Padding="2,0,0,0" VerticalOptions="CenterAndExpand">
                 <BoxView Color="Red" />
-                <Button Text="Software Development Course Overview"                       
-                       TextColor="Blue"
-                       BorderWidth="0"
+                <Button Text="Software Development Course Overview" 
+                        StyleClass="PWbuttonClass"
                        Clicked="OnLabelOverviewClicked" />
             </StackLayout>
         </Frame>
-        <Frame BorderColor="Accent">
-            <StackLayout Orientation="Horizontal">
+        <Frame StyleClass="portalPageFrameSC">
+            <StackLayout Orientation="Horizontal" Padding="2,0,0,0"  VerticalOptions="CenterAndExpand">
                 <BoxView Color="Green" />
                 <Button Text="Internship Form"                       
-                       TextColor="Blue"
-                       BorderWidth="0"
+                       StyleClass="PWbuttonClass"
                        Clicked="OnLabelInternshipClicked" />
 
             </StackLayout>
         </Frame>
-        <Frame BorderColor="Accent">
-            <StackLayout Orientation="Horizontal">
+        <Frame StyleClass="portalPageFrameSC">
+            <StackLayout Orientation="Horizontal" Padding="2,0,0,0" VerticalOptions="CenterAndExpand">
                 <BoxView Color="Blue" />
                 <Button Text="Internship Agreement Form"                       
-                       TextColor="Blue"
-                       BorderWidth="0"
+                       StyleClass="PWbuttonClass"
                        Clicked="OnLabelInternAFClicked" />
             </StackLayout>
         </Frame>
-        <Frame BorderColor="Accent">
-            <StackLayout Orientation="Horizontal">
+        <Frame StyleClass="portalPageFrameSC">
+            <StackLayout Orientation="Horizontal" Padding="2,0,0,0" VerticalOptions="CenterAndExpand">
                 <BoxView Color="OrangeRed" />
                 <Button Text="Internship Timesheet"                       
-                       TextColor="Blue"
-                       BorderWidth="0"
+                       StyleClass="PWbuttonClass"
                        Clicked="OnLabelInternTSClicked" />
             </StackLayout>
         </Frame>

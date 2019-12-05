@@ -73,21 +73,21 @@
         </ToolbarItem>
     </ContentPage.ToolbarItems>
   
- <ScrollView>
+ <ScrollView StyleClass="eventPageScrollView">
         <StackLayout Margin="20,35,20,20">
             <StackLayout.Resources>
                 <ResourceDictionary>
                     <Style x:Key="titleLabel"
                     TargetType="Label"
                     BaseResourceKey="TitleStyle">
-                        <Setter Property="TextColor" Value="Black" />
+                        <Setter Property="TextColor" Value="#4a4a4a" />
                         <Setter Property="HorizontalTextAlignment" Value="Center" />
                     </Style>
                     <!--Implicit styles-->
-                    <Style TargetType="Label"
+                    <!--<Style TargetType="Label"
                     BaseResourceKey="BodyStyle">
-                        <Setter Property="TextColor" Value="Black" />
-                    </Style>
+                        <Setter Property="TextColor" Value="#4a4a4a" />
+                    </Style>-->
                     <Style TargetType="Image">
                         <Setter Property="WidthRequest" Value="240" />
                     </Style>

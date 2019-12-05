@@ -15,7 +15,7 @@ namespace CWIApp
         public ProjectPage()
         {
             InitializeComponent();
-            BackgroundColor = Color.Crimson;
+            //BackgroundColor = Color.Crimson;
             Content = new StackLayout
             {
                 Children =

@@ -1,0 +1,66 @@
+﻿/* CWI App Styles Page. 11/20/2019 */
+
+base {
+    background-color: lightgray;
+    color: #4a4a4a;
+}
+
+/* Page Styles */
+ProjectPage {
+    background-color: #780000;    
+}
+
+LandingPage {
+    background-color: #cdcd9b;
+}
+
+    .landingPageLabelStyleClass {
+        Font-Size:medium;   
+    }
+
+EmailFormPage {
+    background-color: #cdcd9b;
+}   
+
+EventPage {
+    background-color: #cdcd9b;
+}
+
+PWPortalPage {
+    background-color: #cdcd9b;
+}
+
+    .portalPageFrameSC {
+        border-color: #780000;       
+    }
+
+    .PWbuttonClass {
+        background-color: #ededed;
+    }
+
+TestimonialPage {
+    background-color: #cdcd9b;
+}
+
+
+/* Element Sytles*/
+
+    /* Button Styles */
+button {
+    color: #eeb111;
+    background-color: #780000;
+    border: medium;
+    border-color: #cdcd9b;
+    font-weight: 800;
+}            
+
+            /*button:hover {
+                background-color: #cccccc;
+                border-color: #4a4a4a;
+            }*/
+
+    /* Label Styles */
+    label {
+        color: black;
+        font-weight: bold;
+    }

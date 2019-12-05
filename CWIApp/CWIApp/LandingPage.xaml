@@ -2,84 +2,89 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CWIApp.LandingPage"
-             Title="CWI Software Development App"
-             BackgroundColor="#e3e4c2">
-    
-    <Label x:Name="label"
-           FontSize="Medium"
-           HorizontalOptions="Center"
-           VerticalOptions="Center" />
+             Title="CWI Software Development App"            
+  >
+    <ScrollView>
+        <Label x:Name="label"
+           StyleClass="landingPageLabelStyleClass"
+           HorizontalOptions="Center" 
+           VerticalOptions="Center"
+            />
+    </ScrollView>
 
-    <ContentPage.ToolbarItems>
-         <ToolbarItem Text="Home" 
+        <ContentPage.ToolbarItems>
+        
+            <ToolbarItem Text="Home" 
                      Order="Primary"
                      Clicked="OnToolbarItemHomeClicked">
-            <ToolbarItem.Icon>
-                <OnPlatform x:TypeArguments="FileImageSource">
-                    <On Platform="iOS" Value="home.png" />
-                    <On Platform="Android" Value="ic_action_home.png" />
-                    <On Platform="UWP" Value="Images/home.png" />
-                </OnPlatform>
-            </ToolbarItem.Icon>
-        </ToolbarItem>
-      
-        <ToolbarItem Text="Events" 
+                <ToolbarItem.Icon>
+                    <OnPlatform x:TypeArguments="FileImageSource">
+                        <On Platform="iOS" Value="home.png" />
+                        <On Platform="Android" Value="ic_action_home.png" />
+                        <On Platform="UWP" Value="Images/home.png" />
+                    </OnPlatform>
+                </ToolbarItem.Icon>
+            </ToolbarItem>
+
+            <ToolbarItem Text="Events" 
                      Order="Primary"
                      Clicked="OnToolbarItemEventsClicked">
-            <ToolbarItem.Icon>
-                <OnPlatform x:TypeArguments="FileImageSource">
-                    <On Platform="iOS" Value="edit.png" />
-                    <On Platform="Android" Value="ic_action_edit.png" />
-                    <On Platform="UWP" Value="Images/star.png" />
-                </OnPlatform>
-            </ToolbarItem.Icon>
-        </ToolbarItem>
+                <ToolbarItem.Icon>
+                    <OnPlatform x:TypeArguments="FileImageSource">
+                        <On Platform="iOS" Value="edit.png" />
+                        <On Platform="Android" Value="ic_action_edit.png" />
+                        <On Platform="UWP" Value="Images/star.png" />
+                    </OnPlatform>
+                </ToolbarItem.Icon>
+            </ToolbarItem>
 
-        <ToolbarItem Text="Student Forms"
+            <ToolbarItem Text="Student Forms"
                      Order="Primary"
                      Clicked="OnToolbarItemFormsClicked">
-            <ToolbarItem.Icon>
-                <OnPlatform x:TypeArguments="FileImageSource">
-                    <On Platform="iOS" Value="search.png" />
-                    <On Platform="Android" Value="ic_action_search.png" />
-                    <On Platform="UWP" Value="Images/copy-item.png" />
-                </OnPlatform>
-            </ToolbarItem.Icon>
-        </ToolbarItem>
+                <ToolbarItem.Icon>
+                    <OnPlatform x:TypeArguments="FileImageSource">
+                        <On Platform="iOS" Value="search.png" />
+                        <On Platform="Android" Value="ic_action_search.png" />
+                        <On Platform="UWP" Value="Images/copy-item.png" />
+                    </OnPlatform>
+                </ToolbarItem.Icon>
+            </ToolbarItem>
 
-        <ToolbarItem Text="Projects"
+            <ToolbarItem Text="Projects"
                      Order="Primary"
                      Clicked="OnToolbarItemProjectClicked">
-            <ToolbarItem.Icon>
-                <OnPlatform x:TypeArguments="FileImageSource">
-                    <On Platform="iOS" Value="reload.png" />
-                    <On Platform="Android" Value="ic_action_refresh.png" />
-                    <On Platform="UWP" Value="Images/briefcase.png" />
-                </OnPlatform>
-            </ToolbarItem.Icon>
-        </ToolbarItem>
+                <ToolbarItem.Icon>
+                    <OnPlatform x:TypeArguments="FileImageSource">
+                        <On Platform="iOS" Value="reload.png" />
+                        <On Platform="Android" Value="ic_action_refresh.png" />
+                        <On Platform="UWP" Value="Images/briefcase.png" />
+                    </OnPlatform>
+                </ToolbarItem.Icon>
+            </ToolbarItem>
 
-        <ToolbarItem Text="Sign-Up"
+            <ToolbarItem Text="Sign-Up"
                      Order="Primary"
                      Clicked="OnToolbarItemEmailClicked">
-            <ToolbarItem.Icon>
-                <OnPlatform x:TypeArguments="FileImageSource">
-                    <On Platform="iOS" Value="reload.png" />
-                    <On Platform="Android" Value="ic_action_refresh.png" />
-                    <On Platform="UWP" Value="Images/email.png" />
-                </OnPlatform>
-            </ToolbarItem.Icon>
-        </ToolbarItem>
-        <ToolbarItem Text="Testimonials" 
+                <ToolbarItem.Icon>
+                    <OnPlatform x:TypeArguments="FileImageSource">
+                        <On Platform="iOS" Value="reload.png" />
+                        <On Platform="Android" Value="ic_action_refresh.png" />
+                        <On Platform="UWP" Value="Images/email.png" />
+                    </OnPlatform>
+                </ToolbarItem.Icon>
+            </ToolbarItem>
+            <ToolbarItem Text="Testimonials" 
                      Order="Primary"
                      Clicked="OnToolbarItemTestimonalClicked">
-            <ToolbarItem.Icon>
-                <OnPlatform x:TypeArguments="FileImageSource">
-                    <On Platform="iOS" Value="testimonial.png" />
-                    <On Platform="Android" Value="ic_action_testimonial.png" />
-                    <On Platform="UWP" Value="Images/testimonial.png" />
-                </OnPlatform>
-            </ToolbarItem.Icon>
-        </ToolbarItem>
+                <ToolbarItem.Icon>
+                    <OnPlatform x:TypeArguments="FileImageSource">
+                        <On Platform="iOS" Value="testimonial.png" />
+                        <On Platform="Android" Value="ic_action_testimonial.png" />
+                        <On Platform="UWP" Value="Images/testimonial.png" />
+                    </OnPlatform>
+                </ToolbarItem.Icon>
+            </ToolbarItem>
+        
     </ContentPage.ToolbarItems>
+    
 </ContentPage>
