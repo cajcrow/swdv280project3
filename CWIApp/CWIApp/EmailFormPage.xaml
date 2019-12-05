@@ -3,15 +3,23 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:CWIApp"
              Title="Email Form"
-             x:Class="CWIApp.EmailFormPage">
+             x:Class="CWIApp.EmailFormPage"
+             BackgroundColor="#e3e4c2"><!--added color for consistent styling-->
     <ContentPage.Padding>
         <OnPlatform x:TypeArguments="Thickness">
-            <On Platform="iOS" Value="10, 20, 0, 0" />
-            <On Platform="UWP" Value="10, 20, 0, 0" />
-            <On Platform="Android" Value="10, 20, 0, 0" />
+            <On Platform="iOS" Value="0, 20, 0, 0" />
+            <!--<On Platform="Android" Value="0, 20, 0, 0"/>
+            <On Platform="UWP" Value="0, 20, 0, 0"/>-->
         </OnPlatform>
     </ContentPage.Padding>
-    
+    <!--addition of padding/styling options -->
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Entry">
+                
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
 <ContentPage.ToolbarItems>
          <ToolbarItem Text="Home" 
                      Order="Primary"
@@ -73,12 +81,10 @@
             </ToolbarItem.Icon>
         </ToolbarItem>
     </ContentPage.ToolbarItems>
-
-    <StackLayout>
+  
+    <StackLayout Padding="10, 5"><!-- added padding -->
         <TableView x:Name="tableView"
                    Intent="Form">
-            
-            
 
             <TableView.BindingContext>
                 <local:PersonalInformation />
@@ -107,7 +113,7 @@
                         </StackLayout>
                     </ViewCell> 
 
-                    <SwitchCell Text="To schedule a meeting with an insructor?"
+                    <SwitchCell Text="To schedule a meeting with an instructor?"
                                 On="{Binding WantInfo}" />
 
                     <SwitchCell Text="Information on first year courses?"
